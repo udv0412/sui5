@@ -1043,20 +1043,21 @@ sap.ui.require([
 
 								if (oButton && oButton.getId() === "validate") {
 									oButton = aButtons[1];
+								}
 
-									this.waitFor({
-										id: oButton.getId(),
-										actions: new Press(),
-										success: function () {
-											assert.ok("Button was pressed");
-										},
-										error: function () {
-											assert.notOk("Button could not be pressed");
-										}
-									});
 								} else {
 									assert.notOk("Could not find a button");
 								}
+								this.waitFor({
+									id: oButton.getId(),
+									actions: new Press(),
+									success: function () {
+										assert.ok("Button was pressed");
+									},
+									error: function () {
+										assert.notOk("Button could not be pressed");
+									}
+								});
 
 							},
 							error: function () {
