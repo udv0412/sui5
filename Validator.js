@@ -1044,10 +1044,6 @@ sap.ui.require([
 								if (oButton && oButton.getId() === "validate") {
 									oButton = aButtons[1];
 								}
-
-								} else {
-									assert.notOk("Could not find a button");
-								}
 								this.waitFor({
 									id: oButton.getId(),
 									actions: new Press(),
